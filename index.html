@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calling Convention Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calling Convention Explorer</h1>
+  
+  <div class="selector">
+    <label>Select a Convention:</label>
+    <select id="conventionSelect">
+      <option value="cdecl">cdecl</option>
+      <option value="fastcall">fastcall</option>
+      <option value="stdcall">stdcall</option>
+      <option value="sysv">sysv (Linux x64)</option>
+      <option value="ms64">ms64 (Windows x64)</option>
+    </select>
+    <button onclick="showConvention()">Visualize</button>
+    <button onclick="toggleComparison()">Compare All</button>
+  </div>
+
+  <div id="visualization" class="vis-area"></div>
+  <div id="comparisonTable" style="display:none; margin-top: 2rem;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
